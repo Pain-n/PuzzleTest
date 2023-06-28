@@ -18,7 +18,7 @@ public class SelectLvlPanel : MonoBehaviour
 
             lvlButton.onClick.AddListener(() =>
             {
-                //При выборе уровня записывается название изображения.
+                //При выборе уровня записывается название изображения, это нужно для прогрузки набора паззла (имя набора совпадает с именем изображения).
                 GlobalContext.Instance.puzzleSetUpData.selectedImageName = sprite.name;
                 Instantiate(Resources.Load<SelectDifficultyPanel>("Prefabs/Panels/SelectDifficultyPanel"), transform.parent);
             });

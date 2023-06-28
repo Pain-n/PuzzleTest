@@ -16,7 +16,7 @@ public class SelectDifficultyPanel : MonoBehaviour
             {
                 //Я думал использовать для хранения изображений ScriptableObject, но перетаскивать множество изображений в массив вручную это очень долго, поэтому я подгружаю все прямо из папки.
                 //Так быстрее, но тут есть и минусы.
-                //1. нужно следить чтобы в каждом DiffItem были прописаны необходимые параметры, иначе паззл не прогрузиться. Да, все еще нужно что то делать руками, но работы заметно меньше, чем в варианте с ScriptableObject.
+                //Нужно следить чтобы в каждом DiffItem были прописаны необходимые параметры, иначе паззл не прогрузиться. Да, все еще нужно что то делать руками, но работы заметно меньше, чем в варианте с ScriptableObject.
                 GlobalContext.Instance.puzzleSetUpData.selectedDifficulty = item.difficulty;
                 GlobalContext.Instance.puzzleSetUpData.selectedDiffFolderName = item.diffFolderName;
                 SceneManager.LoadScene("GameScene",LoadSceneMode.Single);
